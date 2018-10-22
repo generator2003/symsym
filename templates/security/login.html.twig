@@ -15,9 +15,10 @@
         <span class="error">{{ error.messageKey }}</span>
     {% endif %}
     <form action="{{ path('login') }}" method="post">
-        <input type="text" name="_username" value="{{ last_username }}" placeholder="Username here....">
-        <input type="password" name="_password">
+        <label>login: <input type="text" name="_username" value="{{ last_username }}" placeholder="Username here...."></label>
+        <label>pass: <input type="password" name="_password"></label>
         <button type="submit">Login</button>
     </form>
+    <a href="{{ path('logout') }}">logout</a>
 </div>
 {% endblock %}

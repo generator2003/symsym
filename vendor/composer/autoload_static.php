@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitb8ef8e6bb3805478b7c3259ea9aa4e6d
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
@@ -117,10 +117,12 @@ class ComposerStaticInitb8ef8e6bb3805478b7c3259ea9aa4e6d
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\DBAL\\Migrations\\' => 25,
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\DataFixtures\\' => 29,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
+            'Doctrine\\Bundle\\FixturesBundle\\' => 31,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
@@ -135,8 +137,8 @@ class ComposerStaticInitb8ef8e6bb3805478b7c3259ea9aa4e6d
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Zend\\EventManager\\' => 
         array (
@@ -422,6 +424,10 @@ class ComposerStaticInitb8ef8e6bb3805478b7c3259ea9aa4e6d
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
+        'Doctrine\\Common\\DataFixtures\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures',
+        ),
         'Doctrine\\Common\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
@@ -432,14 +438,18 @@ class ComposerStaticInitb8ef8e6bb3805478b7c3259ea9aa4e6d
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
             1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
             2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
-            3 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            3 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
         ),
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-migrations-bundle',
+        ),
+        'Doctrine\\Bundle\\FixturesBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/doctrine-fixtures-bundle',
         ),
         'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 
         array (
