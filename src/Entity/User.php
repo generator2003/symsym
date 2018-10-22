@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -36,6 +38,21 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="integer", nullable=true)
      */
     private $active;
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max=4096)
+     */
+    private $plainPassword;
+
+    /**
+     *
+     */
+    private $roles = [
+        'ROLE_USER'
+    ];
+
+
 
     public function getId(): ?int
     {
@@ -106,9 +123,7 @@ class User implements UserInterface, \Serializable
      */
     public function getRoles()
     {
-        return [
-          'ROLE_USER'
-        ];
+        return $this->roles;
     }
 
     /**
@@ -153,4 +168,15 @@ class User implements UserInterface, \Serializable
             $this->password,
         ) = unserialize($serialized, ['allowed_classes' => false]);
     }
+
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
+
 }
